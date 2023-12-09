@@ -14,6 +14,13 @@ public class BallMove : MonoBehaviour
         ball = GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W)) {
+            MoveUp();
+        }
+    }
+
     public void MoveUp()
     {
         ball.AddForce(Vector3.forward * powerImpulse);
